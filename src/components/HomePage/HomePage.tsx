@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./HomePage.module.css";
-import Head from "next/head";
+
 
 export default function HomePage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,7 +13,16 @@ export default function HomePage() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let particles: any[] = [];
+interface Particle {
+  x: number;
+  y: number;
+  radius: number;
+  speed: number;
+}
+
+const particles: Particle[] = [];
+
+
     const numParticles = 150;
 
     const resizeCanvas = () => {
@@ -55,13 +64,7 @@ export default function HomePage() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
+     
       <canvas ref={canvasRef} className={styles.canvas}></canvas>
 
       <main className={styles.main}>
