@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 
 import "./globals.css";
+import LayoutWrapper from "@/components/LayoutWrapper/LayoutWrapper";
 
-// Crea la constante inter correctamente
 const inter = Inter({
-  subsets: ['latin'], // Aquí puedes elegir los subsets que necesites
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
   title: "Luis Dev",
   description: "Portafolio personal de Luis, desarrollador Full Stack especializado en crear aplicaciones web modernas y escalables.",
   icons: {
-    icon: "/favicon.ico", // ruta dentro de /public
+    icon: "/favicon.ico",
   },
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -23,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className} suppressHydrationWarning>
-  
-        {children}      
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );
