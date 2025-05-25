@@ -9,10 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Luis Dev | Portafolio",
-  description: "Portafolio personal de Luis Dev",
+  title: "Luis Dev",
+  description: "Portafolio personal de Luis, desarrollador Full Stack especializado en crear aplicaciones web modernas y escalables.",
+  icons: {
+    icon: "/favicon.ico", // ruta dentro de /public
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
