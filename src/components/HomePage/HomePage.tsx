@@ -69,7 +69,7 @@ const particles: Particle[] = [];
 
       <main className={styles.main}>
         <Image
-          src="/logo.jpg"
+          src="/logo.png"
           alt="LuisDev logo"
           width={150}
           height={150}
@@ -78,7 +78,7 @@ const particles: Particle[] = [];
         <h1 className={styles.title}>LuisDev | Desarrollador Full Stack</h1>
         <div className={styles.buttons}>
   <a
-    href="https://luisdev-codigos.vercel.app/"
+    href="https://buymeacoffee.com/luisdev"
     className={styles.button}
     target="_blank"
     rel="noopener noreferrer"
@@ -86,7 +86,7 @@ const particles: Particle[] = [];
     Códigos Completos Gratis
   </a>
   <a
-    href="https://luis-isgr.vercel.app/"
+    href="https://luis-dev-portafolio.vercel.app/"
     className={styles.button}
     target="_blank"
     rel="noopener noreferrer"
@@ -114,7 +114,7 @@ const particles: Particle[] = [];
       </main>
 
       <footer className={styles.footer}>
-        © Copyright LuisDev. Todos los derechos reservados.
+        © Copyright Luis Dev. Todos los derechos reservados.
       </footer>
     </div>
   );
