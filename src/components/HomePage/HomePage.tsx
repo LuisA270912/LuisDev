@@ -78,7 +78,7 @@ const particles: Particle[] = [];
         <h1 className={styles.title}>LuisDev | Desarrollador Full Stack</h1>
         <div className={styles.buttons}>
   <a
-    href="https://buymeacoffee.com/luisdev"
+    href="https://ko-fi.com/luisdev27"
     className={styles.button}
     target="_blank"
     rel="noopener noreferrer"
