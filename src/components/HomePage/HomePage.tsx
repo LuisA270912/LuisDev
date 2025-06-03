@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./HomePage.module.css";
 
-
 export default function HomePage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -13,16 +12,14 @@ export default function HomePage() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-interface Particle {
-  x: number;
-  y: number;
-  radius: number;
-  speed: number;
-}
+    interface Particle {
+      x: number;
+      y: number;
+      radius: number;
+      speed: number;
+    }
 
-const particles: Particle[] = [];
-
-
+    const particles: Particle[] = [];
     const numParticles = 150;
 
     const resizeCanvas = () => {
@@ -36,7 +33,7 @@ const particles: Particle[] = [];
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 1.2 + 0.3, // Más delgadas
+        radius: Math.random() * 1.2 + 0.3,
         speed: Math.random() * 0.5 + 0.2,
       });
     }
@@ -62,9 +59,13 @@ const particles: Particle[] = [];
     };
   }, []);
 
+  const whatsappMessage = encodeURIComponent(
+    "¡Transformo tus ideas en realidad! Códigos personalizados❤️👨🏻‍💻 +51930673027 Mi página: https://ko-fi.com/luisdev27"
+  );
+  const whatsappLink = `https://whatsapp.com/channel/0029Vb5oNqD4SpkCahipvh01?text=${whatsappMessage}`;
+
   return (
     <div className={styles.container}>
-     
       <canvas ref={canvasRef} className={styles.canvas}></canvas>
 
       <main className={styles.main}>
@@ -77,40 +78,48 @@ const particles: Particle[] = [];
         />
         <h1 className={styles.title}>LuisDev | Desarrollador Full Stack</h1>
         <div className={styles.buttons}>
-  <a
-    href="https://ko-fi.com/luisdev27"
-    className={styles.button}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Códigos Completos Gratis
-  </a>
-  <a
-    href="https://luis-dev-portafolio.vercel.app/"
-    className={styles.button}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Portafolio Web
-  </a>
-  <a
-    href="https://github.com/LuisDevCode27"
-    className={styles.button}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    GitHub
-  </a>
-  <a
-    href="https://www.tiktok.com/@luis.dev3"
-    className={styles.button}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Tiktok
-  </a>
-</div>
-
+          <a
+            href="https://ko-fi.com/luisdev27"
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Códigos Completos Gratis
+          </a>
+             <a
+            href={whatsappLink}
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Personalizo tu código
+          </a>
+          <a
+            href="https://luis-dev-portafolio.vercel.app/"
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portafolio Web
+          </a>
+          <a
+            href="https://github.com/LuisDevCode27"
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          {/* <a
+            href="https://www.tiktok.com/@luis.dev3"
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tiktok
+          </a> */}
+       
+        </div>
       </main>
 
       <footer className={styles.footer}>
